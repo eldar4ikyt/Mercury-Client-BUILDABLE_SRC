@@ -22,44 +22,23 @@ import java.util.Objects;
 @ModuleManifest(label = "AutoFish", fakelabel = "Auto Fish", category = Category.MISC)
 public class AutoFish extends Module {
 
-    @Property("Mode")
-    @Mode({"Normal", "Lava"})
-    public String mode = "Normal";
-
     @Property("Cast")
     public boolean cast = false;
 
     @EventHandler
     public void onPacket(PacketEvent event) {
         if (event.getType().equals(PacketEvent.Type.INCOMING)) {
-            if (mode.equalsIgnoreCase("Normal")) {
-                if (event.getPacket() instanceof SPacketSoundEffect) {
-                    SPacketSoundEffect packet = (SPacketSoundEffect)event.getPacket();
-                    if (packet.getCategory() == SoundCategory.NEUTRAL && packet.getSound() == SoundEvents.ENTITY_BOBBER_SPLASH) {
-                        if (mc.player.getHeldItemMainhand().getItem() instanceof ItemFishingRod) {
+            if (event.getPacket() instanceof SPacketSoundEffect) {
+                SPacketSoundEffect packet = (SPacketSoundEffect)event.getPacket();
+                if (packet.getCategory() == SoundCategory.NEUTRAL && packet.getSound() == SoundEvents.ENTITY_BOBBER_SPLASH) {
+                    if (mc.player.getHeldItemMainhand().getItem() instanceof ItemFishingRod) {
+                        click();
+                        if (cast)
                             click();
-                            if (cast)
-                                click();
-                        }
-                    }
-                }
-            }
-            //TODO: fix this
-            if (mode.equalsIgnoreCase("Lava")) {
-                    if (event.getPacket() instanceof SPacketSpawnMob) {
-                    SPacketSpawnMob packet = (SPacketSpawnMob)event.getPacket();
-                    Entity entity = mc.world.getEntityByID(packet.getEntityID());
-                    if (mc.player.fishEntity != null && entity instanceof EntityItem && mc.player.fishEntity.getDistance(Objects.requireNonNull(entity)) < 3) {
-                        if (mc.player.getHeldItemMainhand().getItem() instanceof ItemFishingRod) {
-                            click();
-                            if (cast)
-                                click();
-                        }
                     }
                 }
             }
         }
-
     }
 
     public void click() {

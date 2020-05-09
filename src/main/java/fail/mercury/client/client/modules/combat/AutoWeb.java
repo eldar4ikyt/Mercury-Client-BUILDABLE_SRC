@@ -124,6 +124,8 @@ public class AutoWeb extends Module {
 
     public void place(BlockPos pos, EnumFacing direction) {
         if (swing) {
+            mc.player.swingArm(mc.player.getActiveHand());
+        } else {
             mc.player.connection.sendPacket(new CPacketAnimation(EnumHand.MAIN_HAND));
         }
         mc.player.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(pos, direction, EnumHand.MAIN_HAND, 0.0F, 0.0F, 0.0F));
