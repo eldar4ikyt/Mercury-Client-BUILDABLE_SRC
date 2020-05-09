@@ -40,12 +40,12 @@ public class ModuleManager extends HashMapManager<String, Module> implements Uti
         super.load();
         register(new Commands(), new KeyBinds(), new Sprint(), new Speed(), new Velocity(), new KillAura(), new Flight(), new Timer()
                 , new NoRotate(), new NoFall(), new VisualRange(), new Criticals(), new DiscordRPC()
-                , new AutoFish(), new ChatSuffix(), new Phase(), new Revive(), new Freecam(), new Crasher()
-                , new AntiCrash(), new AutoReply(), new FurryChat(), new FastBow(), new FastPlace(), new AutoTotem()
+                , new AutoFish(), new ChatSuffix(), new Phase(), new Freecam(), new Crasher(), new AntiCrash()
+                , new AutoReply(), new FurryChat(), new FastBow(), new FastPlace(), new AutoTotem()
                 , new AutoWeb(), new Surround(), new AntiHunger(), new GodMode(), new AntiChainPop(), new NoPush(), new Step()
                 , new TotemDetector(), new CaptchaSolver(), new Jesus(), new EntityESP(), new Handshake(), new AntiVoid(), new FullBright()
-                , new PacketCancel(), new SpeedMine(), new KeepBreak(), new BanWave(), new ArmorBreaker(), new HoleESP()
-                , new HitEffects(), new Scaffold(), new HUD(), new Translator(), new ScreenMove(), new Location());
+                , new PacketCancel(), new SpeedMine(), new BanWave()
+                , new HitEffects(), new HUD(), new Translator(), new ScreenMove());
         getRegistry().values().forEach(Module::init);
         this.loadCheats();
     }

@@ -28,7 +28,7 @@ public class CommandManager extends HashMapManager<String, Command> {
 
     public void initialize() {
         register(new ToggleCommand(), new BindCommand(), new ModulesCommand(), new FriendCommand()
-                , new HClipCommand(), new SexCommand(), new HelpCommand(), new MobOwnerCommand());
+                , new HClipCommand(), new HelpCommand(), new MobOwnerCommand());
     }
 
     public HashMap<String, Command> getAliasMap() {
