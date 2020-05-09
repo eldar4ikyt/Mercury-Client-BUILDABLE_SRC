@@ -1,6 +1,6 @@
 # Mercury
-bcuz auto threatened to leek src. so ill make public lole 
-wont build as kix requested his proerty system to be removed so either find it urself and add it or make a new one for it.
+bcuz auto threatened to leek src. so ill make public lole.
+wont build as kix requested his property system to be removed so either find it urself and add it or make a new one for it.
 - by crystallinqq & auto 
 
 # Credits
