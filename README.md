@@ -1,7 +1,8 @@
 # Mercury
-bcuz auto threatened to leek src. so ill make public lole.
-wont build as kix requested his property system to be removed so either find it urself and add it or make a new one for it.
-- by crystallinqq & auto 
+A Minecraft client made by Crystallinqq and Auto.
 
-# Credits
+## Changes compared to the original
+- Re-added the Property System that was removed (ad75c42613d7de8b3c955cb402685abc2f7ba246)
+
+## Credits
 [Kix](https://github.com/yandhi) for the Property System
