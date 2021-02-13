@@ -45,7 +45,7 @@ public class ModuleManager extends HashMapManager<String, Module> implements Uti
                 , new AutoWeb(), new Surround(), new AntiHunger(), new GodMode(), new AntiChainPop(), new NoPush(), new Step()
                 , new TotemDetector(), new CaptchaSolver(), new Jesus(), new EntityESP(), new Handshake(), new AntiVoid(), new FullBright()
                 , new PacketCancel(), new SpeedMine(), new BanWave()
-                , new HitEffects(), new HUD(), new Translator(), new ScreenMove());
+                , new HitEffects(), new Scaffold(), new HUD(), new Translator(), new ScreenMove());
         getRegistry().values().forEach(Module::init);
         this.loadCheats();
     }

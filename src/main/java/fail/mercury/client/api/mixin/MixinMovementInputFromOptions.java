@@ -1,6 +1,7 @@
 package fail.mercury.client.api.mixin;
 
 import fail.mercury.client.Mercury;
+import fail.mercury.client.client.modules.movement.Scaffold;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.util.MovementInput;
 import net.minecraft.util.MovementInputFromOptions;
